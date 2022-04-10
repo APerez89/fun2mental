@@ -1,5 +1,5 @@
 <template>
-  <div class="books__contain">
+  <div class="books__contain container p-5">
     <Book />
   </div>
 </template>
@@ -16,5 +16,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.books__contain {
+}
 </style>
