@@ -1,12 +1,17 @@
 <template>
   <div class="books__contain">
-    Books in here
+    <Book />
   </div>
 </template>
 
 <script>
+import Book from '@/components/Book.vue';
+
 export default {
   name: 'Books',
+  components: {
+    Book,
+  },
 };
 </script>
 

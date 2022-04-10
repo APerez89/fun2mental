@@ -1,6 +1,5 @@
 <template>
   <div class="welcome__contain">
-    <h2>testing</h2>
   </div>
 </template>
 

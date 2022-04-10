@@ -2,15 +2,10 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/f2mlogo.png">
     <Welcome msg="Welcome to Your Vue.js App"/>
-    <p
-      v-for="(book, idx) in books"
-      :key="idx"
-    >{{ book.title }}</p>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 import Welcome from '@/components/Welcome.vue';
 import { books, authors } from '@/assets/Datastore.json';
 
@@ -25,10 +20,20 @@ export default {
       authors,
     };
   },
+  methods: {
+    getAuthor(id) {
+      const author = authors.find((a) => a.id === id);
+      return `${author.firstName} ${author.lastName}`;
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .home {
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
 }
 </style>
