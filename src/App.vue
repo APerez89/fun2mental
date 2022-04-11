@@ -54,4 +54,9 @@ export default {
   width: 100%;
   max-width: 1300px;
 }
+
+.highlight {
+  color: #363136;
+  text-shadow: none;
+}
 </style>

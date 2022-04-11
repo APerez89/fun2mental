@@ -1,21 +1,19 @@
 <template>
   <div class="books__contain container p-5">
-    <Book />
+    <BookCard />
   </div>
 </template>
 
 <script>
-import Book from '@/components/Book.vue';
+import BookCard from '@/components/BookCard.vue';
 
 export default {
   name: 'Books',
   components: {
-    Book,
+    BookCard,
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.books__contain {
-}
 </style>

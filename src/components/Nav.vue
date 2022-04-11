@@ -1,5 +1,20 @@
 <template>
-  <div class="nav__contain">
+  <div
+    class="
+      nav__contain
+      container
+      w-full
+      flex
+      flex-row
+      justify-between
+      items-center
+      p-4
+    ">
+    <div class="logo__wrap">
+      <router-link to="/">
+        <img alt="Vue logo" src="../assets/f2mlogo.png">
+      </router-link>
+    </div>
     <div class="nav__wrap">
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
@@ -17,8 +32,11 @@ export default {
 
 <style lang="scss" scoped>
 .nav__contain {
-  padding: 30px;
-
+  .logo__wrap {
+    img {
+      width: 150px;
+    }
+  }
   a {
     font-weight: bold;
     color: #2c3e50;
