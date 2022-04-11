@@ -1,30 +1,22 @@
 <template>
-  <div class="book__contain grid grid-cols-3 gap-9">
+  <div class="author__contain grid grid-cols-3 gap-9">
     <router-link
-      :to="{ name: 'BookDetails', params: { id: book.id } }"
-      class="book rounded-md p-3.5 grid grid-cols-3 shadow-lg"
-      :style="`background: var(--gradient-${book.author}`"
-      v-for="(book, idx) in books"
+      :to="{ name: 'AuthorDetails', params: { id: author.id } }"
+      class="author rounded-md p-3.5 grid grid-cols-3 shadow-lg"
+      :style="`background: var(--gradient-${author.id}`"
+      v-for="(author, idx) in authors"
       :key="idx"
     >
       <div class="img__wrap">
         <div
-          class="book-img rounded-md shadow-lg"
-          :style="`background-image: url(${book.coverImageUrl})`"
+          class="author-img rounded-md shadow-lg"
+          :style="`background-image: url(${author.imageUrl})`"
         ></div>
       </div>
-      <div class="book__info col-span-2 flex flex-col justify-between text-left ml-3 py-4">
+      <div class="author__info col-span-2 flex flex-col justify-between text-left ml-3 py-4">
         <div class="info__top">
-          <h2 class="text-3xl font-medium">{{ book.title }}</h2>
-          <p>by
-            <router-link
-              class="author__link highlight"
-              :to="{ name: 'AuthorDetails', params: { id: book.author } }"
-            >
-              {{ getAuthor(book.author) }}
-            </router-link>
-          </p>
-          <p class="mt-2.5">Year published: {{ book.year }}</p>
+          <h2 class="text-3xl font-medium">{{ author.firstName }}</h2>
+          <h2 class="text-3xl font-medium">{{ author.lastName }}</h2>
         </div>
         <div class="info__bottom justify-self-end self-end">
           <div class="arrows">
@@ -49,7 +41,7 @@
 import { books, authors } from '@/assets/Datastore.json';
 
 export default {
-  name: 'BookCard',
+  name: 'AuthorCard',
   props: {
     id: books.id,
   },
@@ -69,15 +61,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.book__contain {
+.author__contain {
   width: 100%;
-  .book {
+  .author {
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     transition: var(--transition-f);
     .img__wrap {
       width: 100%;
       position: relative;
-      .book-img {
+      .author-img {
         width: 100%;
         height: 220px;
         background-size: cover;
@@ -87,7 +79,7 @@ export default {
       }
     }
 
-    .book__info {
+    .author__info {
       color: var(--white);
       text-shadow: 0px 1px 4px rgba(0,0,0,0.3);
       .info__top {
@@ -110,7 +102,7 @@ export default {
       transform: scale(1.03);
       box-shadow: 0 20px 30px -12px rgb(0 0 0 / 0.25);
       .img__wrap {
-        .book-img {
+        .author-img {
           box-shadow: 0 20px 30px -10px rgb(0 0 0 / 0.35);
           transform: translateY(-25px);
         }

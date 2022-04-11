@@ -1,17 +1,25 @@
 <template>
   <div class="details">
     <h3>book details in hurr</h3>
-    <p @click="click()">hey</p>
+    <p>{{ book[this.id] }}</p>
   </div>
 </template>
 
-<script>export default {
+<script>
+import books from '@/assets/Datastore.json';
+
+export default {
   name: 'BookDetails',
   props: ['id'],
-  methods: {
-    click() {
-      console.log('this');
-    },
+  data() {
+    return {
+      books: books.books,
+      book: {},
+    };
+  },
+  mounted() {
+    console.log(this.book);
+    this.book = this.books.find((book) => book.id === this.id);
   },
 };
 </script>
