@@ -1,7 +1,9 @@
 <template>
   <div class="details">
-    <h3>book details in hurr</h3>
-    <p>{{ book[this.id] }}</p>
+    <h1>{{ bookDetails.title }}</h1>
+    <img :src="bookDetails.coverImageUrl" alt="" />
+    <h2>{{ bookDetails.year }}</h2>
+    <h2>{{ getAuthor.firstName }} {{ getAuthor.lastName }}</h2>
   </div>
 </template>
 
@@ -15,11 +17,21 @@ export default {
     return {
       books: books.books,
       book: {},
+      authors: books.authors,
+      author: {},
     };
   },
-  mounted() {
-    console.log(this.book);
-    this.book = this.books.find((book) => book.id === this.id);
+  computed: {
+    routeId() {
+      // eslint-disable-next-line
+      return parseInt(this.$route.params.id);
+    },
+    bookDetails() {
+      return books.books.find((book) => book.id === this.routeId);
+    },
+    getAuthor() {
+      return books.authors.find((author) => author.id === this.routeId);
+    },
   },
 };
 </script>

@@ -52,10 +52,6 @@ export default {
     };
   },
   methods: {
-    getAuthor(id) {
-      const author = authors.find((a) => a.id === id);
-      return `${author.firstName} ${author.lastName}`;
-    },
   },
 };
 </script>
@@ -88,6 +84,14 @@ export default {
           &:hover {
             color: var(--white);
           }
+        }
+        .book-img {
+          width: 100%;
+          height: 220px;
+          background-size: cover;
+          background-position: 50%;
+          background-repeat: no-repeat;
+          transition: var(--transition-f);
         }
       }
       .info__bottom {
