@@ -24,7 +24,6 @@
       <router-link class="p-4" to="/about">About</router-link>
       <router-link class="p-4" to="/books">Books</router-link>
       <router-link class="p-4" to="/authors">Authors</router-link>
-      <router-link class="p-4" to="/contact">Contact</router-link>
     </div>
 
     <div
@@ -69,7 +68,6 @@
         <router-link @click="openNav" to="/about">About</router-link>
         <router-link @click="openNav" to="/books">Books</router-link>
         <router-link @click="openNav" to="/authors">Authors</router-link>
-        <router-link @click="openNav" to="/contact">Contact</router-link>
       </div>
     </div>
   </div>

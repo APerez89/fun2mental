@@ -1,7 +1,19 @@
 <template>
   <div class="popular__contain w-full flex justify-center p-5 my-6">
     <div class="popular_book container flex flex-col items-center">
-      <h3 class="text-3xl mb-9 tracking-wide leading-7 highlight-l">Now Trending</h3>
+      <h3 class="
+        popular-head
+        text-3xl
+        mb-9
+        pl-3
+        pr-3
+        pb-3
+        tracking-wide
+        leading-7
+        highlight-d"
+      >
+        Now Trending
+      </h3>
       <div class="
         book_wrap
         grid
@@ -56,6 +68,9 @@ export default {
 <style lang="scss" scoped>
 .popular__contain {
   .popular_book {
+    .popular-head {
+      border-bottom: 2px solid var(--green);
+    }
     .book_wrap {
       .book {
         background-color: var(--white);
