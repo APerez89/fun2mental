@@ -33,8 +33,8 @@
       book__info
       grid
       grid-cols-1
-      md:grid-cols-3
       lg:grid-cols-3
+      md:grid-cols-3
       justify-items-center
       p-6"
     >
@@ -43,6 +43,7 @@
       </div>
       <div class="
         info_right
+        md:col-span-2
         lg:col-span-2
         flex
         flex-col
