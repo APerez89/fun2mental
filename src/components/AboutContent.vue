@@ -20,7 +20,7 @@
         >
         <span class="highlight-l">Fun2Mental</span>
         is a demo website made by me (<span class="highlight-l">Alex</span>),
-        as a code challenge for
+        as a coding challenge for
         <a href="https://www.tekpartners.com/" target="_blank"><span class="highlight-l">TekPartners</span></a>
         to showcase my capabilities as a front-end developer.
       </p>

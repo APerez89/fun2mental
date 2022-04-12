@@ -92,13 +92,22 @@ export default {
       authors: books.authors,
     };
   },
+  created() {
+    // eslint-disable-next-line
+    // const routeId = parseInt(this.$route.params.id);
+
+    // const details = books.books.find((book) => book.id === routeId);
+
+    // if (routeId !== details.id) {
+    //   this.$router.push({ name: '404Resource', params: { resource: 'ID' } });
+    //   console.log('did not match');
+    // }
+  },
   computed: {
-    routeId() {
-      // eslint-disable-next-line
-      return parseInt(this.$route.params.id);
-    },
     bookDetails() {
-      return books.books.find((book) => book.id === this.routeId);
+      // eslint-disable-next-line
+      const routeId = parseInt(this.$route.params.id);
+      return books.books.find((book) => book.id === routeId);
     },
     getAuthor() {
       return books.authors.find((author) => author.id === this.bookDetails.author);
