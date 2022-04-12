@@ -1,9 +1,41 @@
 <template>
-  <div class="book__details_contain flex justify-center container">
+  <div class="
+    book__details_contain
+    flex
+    flex-col
+    justify-center
+    container
+    p-4"
+  >
+    <router-link
+      to="/books"
+      class="
+        back
+        self-start
+        highlight-l
+        flex"
+    >
+    <span class="mr-2 left-arrow">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
+      </svg>
+    </span>
+      Back to Books list
+    </router-link>
     <div class="
       book__info
       grid
+      grid-cols-1
+      md:grid-cols-3
       lg:grid-cols-3
+      justify-items-center
       p-6"
     >
       <div class="info_left mb-3">
@@ -14,7 +46,9 @@
         lg:col-span-2
         flex
         flex-col
-        p-7
+        p-4
+        md:p-7
+        lg:p-7
         justify-evenly"
       >
         <div class="right_top mb-5">
@@ -73,10 +107,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* * {
-  border: 1px solid red;
-} */
 .book__details_contain {
+  .back {
+    .left-arrow {
+      transition: var(--transition-f);
+    }
+    &:hover {
+      text-decoration: underline;
+      .left-arrow {
+        transform: translateX(-3px);
+      }
+    }
+  }
   .book__info {
     .info_left {
       max-width: 350px;

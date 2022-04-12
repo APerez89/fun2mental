@@ -17,7 +17,7 @@ export default {
 :root {
   --white: #eef3f5;
   --green: #129a9f;
-  --d-gray: #363136;
+  --d-gray: #413a41;
   --l-gray: #595959;
   --gradient-1: linear-gradient(90deg,
     rgba(0,130,112,1) 0%,
@@ -32,6 +32,9 @@ export default {
   --gradient-8: linear-gradient(19deg, #FAACA8 0%, #c4bbde 100%);
   --gradient-9: linear-gradient(19deg, #F4D03F 0%, #16A085 100%);
   --gradient-10: linear-gradient(19deg, #FBAB7E 0%, #e9c059 100%);
+  --gradient-11: linear-gradient(19deg, #9FACE6 0%, #FF9A8B 100%);
+  --gradient-12: linear-gradient(19deg, #EE74E1 0%, #F4D03F 100%);
+  --gradient-13: linear-gradient(19deg, #FF6A88 0%, #21D4FD 100%);
   --transition-f: all 0.3s ease-in-out;
   --transition-s: all 1s ease-in-out;
 }
