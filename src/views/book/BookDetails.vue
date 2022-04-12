@@ -1,16 +1,21 @@
 <template>
   <div class="book__details_contain container">
-    <div class="book__info">
+    <div class="
+      book__info
+      grid
+      grid-cols-3
+      p-6"
+    >
       <div class="info_left">
         <img :src="bookDetails.coverImageUrl" alt="" />
       </div>
-    </div>
-    <div class="info-right">
-      <h1>{{ bookDetails.title }}</h1>
-      <h2>{{ bookDetails.year }}</h2>
-      <router-link :to="{ name: 'AuthorDetails', params: { id: bookDetails.author } }">
-        {{ getAuthor.firstName }} {{ getAuthor.lastName }}
-      </router-link>
+      <div class="info_right col-span-2">
+        <h1 class="text-6xl">{{ bookDetails.title }}</h1>
+        <h2>{{ bookDetails.year }}</h2>
+        <router-link :to="{ name: 'AuthorDetails', params: { id: bookDetails.author } }">
+          {{ getAuthor.firstName }} {{ getAuthor.lastName }}
+        </router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -43,5 +48,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+* {
+  border: 1px solid red;
+}
+.book__details_contain {
+  .book__info {
+    .info_left {
+      max-width: 350px;
+      img {
+        width: 100%;
+      }
+    }
+    .info_right {}
+  }
+}
 </style>

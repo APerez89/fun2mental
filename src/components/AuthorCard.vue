@@ -1,5 +1,12 @@
 <template>
-  <div class="author__contain grid grid-cols-3 gap-9">
+  <div class="
+    author__contain
+    grid
+    grid-cols-1
+    md:grid-cols-2
+    lg:grid-cols-3
+    gap-9"
+  >
     <router-link
       :to="{ name: 'AuthorDetails', params: { id: author.id } }"
       class="author rounded-md p-3.5 grid grid-cols-3 shadow-lg"
