@@ -99,10 +99,10 @@
               ></div>
             </div>
             <div class="card_bottom flex justify-between">
-              <h3 class="text-xl">
+              <h3 class="text-xl text-left">
                 {{ book.title }}
               </h3>
-              <div class="arrows">
+              <div class="arrows self-end">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6"
@@ -188,6 +188,7 @@ export default {
           .card_bottom {
             color: var(--white);
             h3 {
+              max-width: 250px;
               text-shadow: 0px 1px 4px rgba(0,0,0,0.3);
             }
             .arrows {
