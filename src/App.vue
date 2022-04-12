@@ -16,6 +16,9 @@ export default {
 <style lang="scss">
 :root {
   --white: #eef3f5;
+  --green: #129a9f;
+  --d-gray: #363136;
+  --l-gray: #595959;
   --gradient-1: linear-gradient(90deg,
     rgba(0,130,112,1) 0%,
     rgba(25,181,142,1) 50%,
@@ -55,8 +58,12 @@ export default {
   max-width: 1300px;
 }
 
-.highlight {
-  color: #363136;
+.highlight-d {
+  color: var(--d-gray);
   text-shadow: none;
+}
+
+.highlight-l {
+  color: var(--green);
 }
 </style>

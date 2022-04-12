@@ -25,7 +25,7 @@
           <h2 class="text-3xl font-medium">{{ book.title }}</h2>
           <p>by
             <router-link
-              class="author__link highlight"
+              class="author__link highlight-d"
               :to="{ name: 'AuthorDetails', params: { id: book.author } }"
             >
               {{ getAuthor(book.author) }}
