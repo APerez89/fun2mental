@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home p-0">
     <Welcome />
   </div>
 </template>
@@ -17,9 +17,7 @@ export default {
 
 <style lang="scss" scoped>
 .home {
-  h3 {
-    font-size: 1.1rem;
-    font-weight: 500;
-  }
+  width: 100%;
+  min-height: calc(100vh - 182px);
 }
 </style>

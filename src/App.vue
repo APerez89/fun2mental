@@ -1,14 +1,24 @@
 <template>
-  <Nav />
+  <div class="nav-view container flex justify-between px-6 py-4">
+    <div class="logo__wrap">
+      <router-link to="/">
+        <img class="w-32" alt="Vue logo" src="./assets/f2mlogo.png">
+      </router-link>
+    </div>
+    <Nav />
+  </div>
   <router-view/>
+  <Footer />
 </template>
 
 <script>
 import Nav from '@/components/Nav.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
   components: {
     Nav,
+    Footer,
   },
 };
 </script>
@@ -17,6 +27,7 @@ export default {
 :root {
   --white: #eef3f5;
   --green: #129a9f;
+  --d-green: #08787c;
   --d-gray: #413a41;
   --l-gray: #595959;
   --gradient-1: linear-gradient(90deg,
@@ -56,11 +67,6 @@ export default {
   margin: 0;
 }
 
-.container {
-  width: 100%;
-  max-width: 1300px;
-}
-
 .highlight-d {
   color: var(--d-gray);
   text-shadow: none;
@@ -68,5 +74,12 @@ export default {
 
 .highlight-l {
   color: var(--green);
+}
+
+.nav-view {
+  width: 100%;
+  .logo__wrap {
+    width: 100%;
+  }
 }
 </style>
