@@ -29,8 +29,8 @@
           text-lg
           "
       >
-        For this website, I used <a href="https://www.vuejs.org"><span class="highlight-l">VueJS</span></a>
-        coupled with <a href="https://tailwindcss.com/"><span class="highlight-l">Tailwind CSS</span></a>.
+        For this website, I used <a href="https://www.vuejs.org" target="_blank"><span class="highlight-l">VueJS</span></a>
+        coupled with <a href="https://tailwindcss.com/" target="_blank"><span class="highlight-l">Tailwind CSS</span></a>.
       </p>
     </div>
     <div class="requirements flex flex-col">
