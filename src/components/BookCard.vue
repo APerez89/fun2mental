@@ -16,6 +16,7 @@
     >
       <div class="img__wrap">
         <div
+          data-testid="book-img"
           class="book-img rounded-md shadow-lg"
           :style="`background-image: url(${book.coverImageUrl})`"
         ></div>

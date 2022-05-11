@@ -107,9 +107,11 @@ export default {
     bookDetails() {
       // eslint-disable-next-line
       const routeId = parseInt(this.$route.params.id);
+      console.log(books.books.find((book) => book.id === routeId));
       return books.books.find((book) => book.id === routeId);
     },
     getAuthor() {
+      console.log(books.authors.find((author) => author.id === this.bookDetails.author));
       return books.authors.find((author) => author.id === this.bookDetails.author);
     },
   },
